@@ -1,0 +1,18 @@
+{% extends "littlelemon/base.html" %}
+
+
+{% block content %}
+
+<div class="mt-4">
+    <div class="card-body">
+        <h5>Add New Menu Item</h5>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <a type="button" class="btn btn-danger" href="{%url 'home' %}">Cancel</a>
+            <button type="submit" class="btn btn-success">Add</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
