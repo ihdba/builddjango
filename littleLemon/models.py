@@ -1,7 +1,7 @@
 from django.db import models
 
-# Create your models here.
 
+# Create your models here.
 
 
 class MenuItems(models.Model):
@@ -25,10 +25,11 @@ class MenuItems(models.Model):
         ("MZ", "Mezes")
     ]
 
+
     item = models.CharField(max_length = 250)
     description = models.CharField(max_length=250)
     category = models.CharField(max_length=1, choices=CATEGORIES, default="G")
-    course = models.CharField(max_length=2, choices=COURSE, default="MC")
+    course = models.CharField(max_length=2, choices=COURSE, default='MC')
 
 
     def __str__(self):
@@ -38,3 +39,5 @@ class MenuItems(models.Model):
     class Meta:
 
         verbose_name_plural = 'MenuItems'
+
+
